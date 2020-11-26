@@ -14,10 +14,10 @@
         <li><a href="#">Groep 6</a></li>
         <li><a href="#">uitleg en video's</a>
             <ul>
-                <li><a href="">video 1</a></li>
-                <li><a href="">video 2</a></li>
-                <li><a href="">video 3</a></li>
-                <li><a href="">video 4</a></li>
+                <li><a href="">videouitleg plus</a></li>
+                <li><a href="">videouitleg keer</a></li>
+                <li><a href="">videouitleg min</a></li>
+                <li><a href="">videouitleg delen</a></li>
             </ul>
         </li>
         <li><a href="#" id="contact">contact opnemen</a></li>
