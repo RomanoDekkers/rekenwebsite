@@ -16,22 +16,7 @@
         <li><a href="#" id="contact">contact opnemen</a></li>
     </ul>
 </nav>
-<div class="slider-frame">
-    <div class="slide-images">
-        <div class="img-container">
-            <img src="foto_1.jpg" height = "250" width = "400">
-        </div>
-        <div class="img-container">
-            <img src="foto_2.jpg" height = "250" width = "400">
-        </div>
-        <div class="img-container">
-            <img src="foto_3.jpg" height = "250" width = "400">
-        </div>
-        <div class="img-container">
-            <img src="foto_4.jpg" height = "250" width = "400">
-        </div>
-    </div>
-</div>
+
 </body>
 </html>
 
