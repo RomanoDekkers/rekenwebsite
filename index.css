@@ -19,20 +19,21 @@ nav {
     background-color: #e38f9c;
 }
 
-ul {
+nav ul {
 
 }
 
-ul li {
+nav ul li {
     list-style: none;
     display: inline-block;
     float: left;
     line-height: 100px;
+    position: relative;
 }
 
 
 
-ul li a {
+nav ul li a {
     text-decoration: none;
     font-size: 28px;
     font-family: Arial, serif;
@@ -40,7 +41,34 @@ ul li a {
     padding: 20px;
 }
 
-ul li a:hover {
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #e38f9c;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+    margin-top: -5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 180px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+nav ul li ul li a{
+    padding: 8px 20px;
+}
+
+nav ul li ul li a:hover {
+    background-color: #de7171;
+}
+
+nav ul li a:hover {
     color: #000000;
     background-color: #de7171;
 }
@@ -48,4 +76,10 @@ ul li a:hover {
     margin-left: 320px;
 }
 
+h1 {
 
+}
+
+p {
+    font-size: 18px;
+}
