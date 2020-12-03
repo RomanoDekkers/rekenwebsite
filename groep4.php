@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>contactformulier</title>
+    <title>groep 4</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
