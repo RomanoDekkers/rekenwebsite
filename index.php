@@ -12,7 +12,7 @@
         <li><a href="#">Groep 4</a></li>
         <li><a href="#">Groep 5</a></li>
         <li><a href="#">Groep 6</a></li>
-        <li><a href="#">uitleg en video's</a>
+        <li><a href="#">hulpvideo's</a>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=1gmUWGt2KRg" target="_blank">videouitleg plus</a></li>
                 <li><a href="https://www.youtube.com/watch?v=adEkIa42Y2k&t=132s" target="_blank">videouitleg min</a></li>
@@ -26,7 +26,16 @@
 <br />
 <br />
 <h1>De Splinter</h1>
-<p>Hier komt info over de school</p>
+<br/>
+<h2>Openingstijden:</h2>
+<p>maandag tot en met dinsdag van 08:00 tot en met 17:30</p>
+<br/>
+<h2>Vakantierooster:</h2>
+<br/>
+<img src="vakantierooster.png" alt="vakantierooster" height="150" width="450">
+<br/>
+<br/>
+<h2>bericht van de dag:</h2>
 </body>
 </html>
 
