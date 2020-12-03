@@ -14,10 +14,10 @@
         <li><a href="#">Groep 6</a></li>
         <li><a href="#">uitleg en video's</a>
             <ul>
-                <li><a href="">videouitleg plus</a></li>
-                <li><a href="">videouitleg keer</a></li>
-                <li><a href="">videouitleg min</a></li>
-                <li><a href="">videouitleg delen</a></li>
+                <li><a href="https://www.youtube.com/watch?v=1gmUWGt2KRg" target="_blank">videouitleg plus</a></li>
+                <li><a href="https://www.youtube.com/watch?v=adEkIa42Y2k&t=132s" target="_blank">videouitleg min</a></li>
+                <li><a href="https://www.youtube.com/watch?v=d79H5i5SUd8" target="_blank">videouitleg keer</a></li>
+                <li><a href="https://www.youtube.com/watch?v=4PyzMWQ-7B8" target="_blank">videouitleg delen</a></li>
             </ul>
         </li>
         <li><a href="#" id="contact">contact opnemen</a></li>
