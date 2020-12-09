@@ -22,5 +22,52 @@
         <li><a href="contact.php" id="contact">contact opnemen</a></li>
     </ul>
 </nav>
+<?php
+if (!isset($_POST['submit'])){
+?>
+    <div id="content">
+    <form name="form1" action="" method="post">
+        <h1>welke soort sommen wil je oefenen</h1>
+        <div id="sommen">
+            <input type="radio" name="soortsommen" value="plus">plus sommen<br />
+            <input type="radio" name="soortsommen" value="min">min sommen<br />
+            <input type="radio" name="soortsommen" value="keer">keer sommen<br />
+            <input type="radio" name="soortsommen" value="deel">deel sommen<br />
+
+            <input id="maak" type="submit" name="submit" value="maak"/>
+        </div>
+    </form>
+    </div>
+<?php
+}
+else {
+    $_test = $_POST['soortsommen'];
+
+    if($_test == 'plus'){
+        echo "<div class='start'>
+                <h1>je gaat nu plus sommen maken</h1><br />
+                <input id='begin' type='submit' name='plus' value='start'>
+              </div>";
+    }
+    elseif($_test == 'min'){
+        echo "<div class='start'>
+                <h1>je gaat nu min sommen maken</h1><br />
+                <input id='begin' type='submit' name='min' value='start'>
+              </div>";
+    }
+    elseif($_test == 'keer'){
+        echo "<div class='start'>
+                <h1>je gaat nu keer sommen maken</h1><br />
+                <input id='begin' type='submit' name='keer' value='start'>
+              </div>";
+    }
+    else{
+        echo "<div class='start'>
+                <h1>je gaat nu deel sommen maken</h1><br />
+                <input id='begin' type='submit' name='deel' value='start'>
+              </div>";
+    }
+}
+?>
 </body>
 </html>

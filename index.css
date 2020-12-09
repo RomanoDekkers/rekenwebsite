@@ -2,17 +2,17 @@
     margin: 0;
     padding: 0;
 }
-
+/*achtergrondkleur*/
 body{
     background-color: #ecbdc4;
 }
-
+/*logo placement*/
 #logo {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 50px;
 }
-
+/*kleur, hoogte en lengte van nav bar*/
 nav {
     width: 100%;
     height: 100px;
@@ -22,7 +22,7 @@ nav {
 nav ul {
 
 }
-
+/*stijl van nav bar*/
 nav ul li {
     list-style: none;
     display: inline-block;
@@ -32,7 +32,7 @@ nav ul li {
 }
 
 
-
+/*opmaak van de tekst in de nav bar*/
 nav ul li a {
     text-decoration: none;
     font-size: 28px;
@@ -40,7 +40,7 @@ nav ul li a {
     color: #1e1e1e;
     padding: 20px;
 }
-
+/*stijl van de dropdown*/
 nav ul li ul {
     display: none;
     position: absolute;
@@ -49,32 +49,33 @@ nav ul li ul {
     border-radius: 0px 0px 4px 4px;
     margin-top: -5px;
 }
-
+/*block van dropdown*/
 nav ul li:hover ul {
     display: block;
 }
-
+/*nog meer stijl van de dropdown*/
 nav ul li ul li {
     width: 180px;
     text-align: left;
     margin-top: -30px;
 }
-
+/*opmaak van de tekst in de dropdown*/
 nav ul li ul li a{
     padding: 20px 20px;
 	font-size: 17px;
 	font-weight: bold;
 	
 }
-
+/*hover van dropdown*/
 nav ul li ul li a:hover {
     background-color: #de7171;
 }
-
+/*hover van de nav bar*/
 nav ul li a:hover {
     color: #000000;
     background-color: #de7171;
 }
+/*positie van de contact knop*/
 #contact {
     margin-left: 320px;
 }
@@ -85,4 +86,28 @@ h1 {
 
 p {
     font-size: 18px;
+}
+#content {
+    margin-left: 500px;
+    margin-top: 50px;
+}
+#sommen {
+    margin-left: 150px;
+    font-size: 26px;
+}
+#maak {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 8em;
+    height: 3em;
+}
+.start {
+    margin-left: 500px;
+    margin-top: 50px;
+}
+#begin {
+    margin-left: 150px;
+    margin-top: 5px;
+    width: 8em;
+    height: 3em;
 }
