@@ -44,30 +44,23 @@ else {
     $_test = $_POST['soortsommen'];
 
     if($_test == 'plus'){
-        echo "<div class='start'>
-                <h1>je gaat nu plus sommen maken</h1><br />
-                <input id='begin' type='submit' name='plus' value='start'>
-              </div>";
+        $name = "plus";
     }
     elseif($_test == 'min'){
-        echo "<div class='start'>
-                <h1>je gaat nu min sommen maken</h1><br />
-                <input id='begin' type='submit' name='min' value='start'>
-              </div>";
+        $name = "min";
     }
     elseif($_test == 'keer'){
-        echo "<div class='start'>
-                <h1>je gaat nu keer sommen maken</h1><br />
-                <input id='begin' type='submit' name='keer' value='start'>
-              </div>";
+        $name = "keer";
     }
     else{
-        echo "<div class='start'>
-                <h1>je gaat nu deel sommen maken</h1><br />
-                <input id='begin' type='submit' name='deel' value='start'>
-              </div>";
+        $name = "deel";
     }
+    echo "<div class='start'>";
+    echo "<h1>je gaat nu ".$name." sommen maken</h1><br />";
+    echo "<input id='begin' type='submit' name='".$name."' value='start'>";
+    echo "</div>";
 }
+
 ?>
 </body>
 </html>
