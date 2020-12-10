@@ -23,7 +23,9 @@
     </ul>
 </nav>
 <?php
-
+    if(isset($_GET['somtype'])){
+        echo $_GET['somtype'];
+    }
 ?>
 </body>
 </html>

@@ -57,7 +57,9 @@ else {
     }
     echo "<div class='start'>";
     echo "<h1>je gaat nu ".$name." sommen maken</h1><br />";
+    echo "<form method='post' action='groep4sommen.php?somtype=$name' name='somkeuze'>";
     echo "<input id='begin' type='submit' name='".$name."' value='start'>";
+    echo "</form>";
     echo "</div>";
 }
 
