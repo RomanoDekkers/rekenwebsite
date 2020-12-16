@@ -23,8 +23,34 @@
     </ul>
 </nav>
 <?php
-    if(isset($_GET['somtype'])){
-        echo $_GET['somtype'];
+    if(isset($_GET['somtype'])) {
+        $operator = "+";
+        $_nummer1 = rand(0, 50);
+        $_nummer2 = rand(0, 50);
+        $uitkomst = -1;
+        switch ($_GET['somtype']){
+            case "keer":
+                $operator = "x";
+                $uitkomst = $_nummer1*$_nummer2;
+                break;
+            case "deel":
+                $operator = ":";
+                $uitkomst = $_nummer1/$_nummer2;
+                break;
+            case "plus":
+                $operator = "+";
+                $uitkomst = $_nummer1+$_nummer2;
+                break;
+            case "min":
+                $operator = "-";
+                $uitkomst = $_nummer1-$_nummer2;
+                break;
+        }
+
+
+
+        echo "wat is $_nummer1 $operator $_nummer2?";
+        echo "$uitkomst";
     }
 ?>
 </body>
