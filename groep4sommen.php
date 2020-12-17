@@ -25,8 +25,23 @@
 <?php
     if(isset($_GET['somtype'])) {
         $operator = "+";
-        $_nummer1 = rand(0, 50);
-        $_nummer2 = rand(0, 50);
+        if(isset($_POST['getalEen']))
+        {
+            $_nummer1 = $_POST['getalEen']; //uitkomst controlleren
+        }
+        else{
+            $_nummer1 = rand(0, 50); //nieuwe som
+        }
+
+        if(isset($_POST['getalTwee']))
+        {
+            $_nummer2 = $_POST['getalTwee']; //uitkomt controlleren
+        }
+        else{
+            $_nummer2 = rand(0, 50); //nieuwe som
+        }
+
+
         $uitkomst = -1;
         switch ($_GET['somtype']){
             case "keer":
@@ -47,11 +62,37 @@
                 break;
         }
 
+        $reactie = "";
+        if(isset($_POST['antwoord']) )
+        {
+            if($_POST['antwoord'] == $uitkomst) {
+                $reactie = "Het antwoord is " . $uitkomst . ", en je hebt het goede antwoord gegeven";
+                echo "$reactie <br />";
+            }
+            else{
+                $reactie = "Helaas, het antwoord is fout. Het goede antwoordt was ". $uitkomst ."";
+                echo "$reactie <br />";
+            }
+        }
+        else{
+
+        }
 
 
         echo "wat is $_nummer1 $operator $_nummer2?";
-        echo "$uitkomst";
+
+        echo "<br />$uitkomst";
+        echo "<div>    
+                <form name='somen' action='' method='post'>
+                    <input type='text' name='antwoord'>
+                    <input type='hidden' name='getalEen' value='$_nummer1'>
+                    <input type='hidden' name='getalEen' value='$_nummer2'>
+                    <input id='mijnantwoord' type='submit' name='mijnantwoord' value='nakijken'
+                </form>
+              </div>";
     }
+    if(isset($_GET['antwoord'])){
+        echo "($_GET ['antwoord'])";}
 ?>
 </body>
 </html>
