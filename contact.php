@@ -22,5 +22,6 @@
         <li><a href="contact.php" id="contact">contact opnemen</a></li>
     </ul>
 </nav>
+
 </body>
 </html>
