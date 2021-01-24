@@ -23,66 +23,66 @@
     </ul>
 </nav>
 <?php
-    if(isset($_GET['somtype'])) {
-        $operator = "+";
-        if (isset($_POST['getalEen'])) {
-            $_nummer1 = $_POST['getalEen']; //uitkomst controlleren
+if(isset($_GET['somtype'])) {
+    $operator = "+";
+    if (isset($_POST['getalEen'])) {
+        $_nummer1 = $_POST['getalEen']; //uitkomst controlleren
+    } else {
+        $_nummer1 = rand(0, 50); //nieuwe som
+    }
+
+    if (isset($_POST['getalTwee'])) {
+        $_nummer2 = $_POST['getalTwee']; //uitkomt controlleren
+    } else {
+        $_nummer2 = rand(0, 50); //nieuwe som
+    }
+
+    switch ($_GET['somtype']) {
+        case "keer":
+            $operator = "x";
+            $uitkomst = $_nummer1 * $_nummer2;
+            break;
+        case "deel":
+            $operator = ":";
+            $uitkomst = $_nummer1 / $_nummer2;
+            break;
+        case "plus":
+            $operator = "+";
+            $uitkomst = $_nummer1 + $_nummer2;
+            break;
+        case "min":
+            $operator = "-";
+            $uitkomst = $_nummer1 - $_nummer2;
+            break;
+    }
+
+    $reactie = "";
+    if (isset($_POST['antwoord'])) //code die wordt uitgevoerd wanneer er wel op de nakijkknop gedrukt is
+    {
+        echo "De oude som is " . $_nummer1 . " " . $operator . " " . $_nummer2;
+
+        if ($_POST['antwoord'] == $uitkomst) {
+            $reactie = "Het antwoord is " . $uitkomst . ", en je hebt het goede antwoord gegeven";
+            echo "$reactie <br />";
         } else {
-            $_nummer1 = rand(0, 50); //nieuwe som
+            $reactie = "Helaas, het antwoord is fout. Het goede antwoordt was " . $uitkomst . "";
+            echo "$reactie <br />";
         }
-
-        if (isset($_POST['getalTwee'])) {
-            $_nummer2 = $_POST['getalTwee']; //uitkomt controlleren
-        } else {
-            $_nummer2 = rand(0, 50); //nieuwe som
-        }
-
-            switch ($_GET['somtype']) {
-                case "keer":
-                    $operator = "x";
-                    $uitkomst = $_nummer1 * $_nummer2;
-                    break;
-                case "deel":
-                    $operator = ":";
-                    $uitkomst = $_nummer1 / $_nummer2;
-                    break;
-                case "plus":
-                    $operator = "+";
-                    $uitkomst = $_nummer1 + $_nummer2;
-                    break;
-                case "min":
-                    $operator = "-";
-                    $uitkomst = $_nummer1 - $_nummer2;
-                    break;
-            }
-
-            $reactie = "";
-            if (isset($_POST['antwoord'])) //code die wordt uitgevoerd wanneer er wel op de nakijkknop gedrukt is
-            {
-                echo "De oude som is " . $_nummer1 . " " . $operator . " " . $_nummer2;
-
-                if ($_POST['antwoord'] == $uitkomst) {
-                    $reactie = "Het antwoord is " . $uitkomst . ", en je hebt het goede antwoord gegeven";
-                    echo "$reactie <br />";
-                } else {
-                    $reactie = "Helaas, het antwoord is fout. Het goede antwoordt was " . $uitkomst . "";
-                    echo "$reactie <br />";
-                }
-                unset($uitkomst);
-                echo "<div> 
+        unset($uitkomst);
+        echo "<div> 
                   <form method='post' action='groep4sommen.php?somtype=$operator' name='somkeuze'>
                   <input id='begin' type='submit' value='volgende vraag'>
                   </form>   
                   </div>";
 
-            } else { //code die wordt uitgevoerd wanneer er niet op de nakijkknop gedrukt is.
-                echo "wat is $_nummer1 $operator $_nummer2?";
-                echo "<br />rond af op twee decimalen als het nodig is";
-                if ($operator == "x" || $operator == ":") {
-                    echo "<br />je mag een rekenmachine gebruiken";
-                }
-                echo "<br />$uitkomst";
-                echo "<div>    
+    } else { //code die wordt uitgevoerd wanneer er niet op de nakijkknop gedrukt is.
+        echo "wat is $_nummer1 $operator $_nummer2?";
+        echo "<br />rond af op twee decimalen als het nodig is";
+        if ($operator == "x" || $operator == ":") {
+            echo "<br />je mag een rekenmachine gebruiken";
+        }
+        echo "<br />$uitkomst";
+        echo "<div>    
                 <form name='somen' action='' method='post'>
                     <input type='text' name='antwoord'>
                     <input type='hidden' name='getalEen' value='$_nummer1'>
@@ -90,11 +90,11 @@
                     <input id='mijnantwoord' type='submit' name='mijnantwoord' value='nakijken'
                 </form>
               </div>";
-            }
-        if (isset($_GET['antwoord'])) {
-            echo "($_GET ['antwoord'])";
-        }
     }
-    ?>
+    if (isset($_GET['antwoord'])) {
+        echo "($_GET ['antwoord'])";
+    }
+}
+?>
 </body>
 </html>
