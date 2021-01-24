@@ -37,7 +37,6 @@
             $_nummer2 = rand(0, 50); //nieuwe som
         }
 
-            $uitkomst = -1;
             switch ($_GET['somtype']) {
                 case "keer":
                     $operator = "x";
@@ -69,6 +68,7 @@
                     $reactie = "Helaas, het antwoord is fout. Het goede antwoordt was " . $uitkomst . "";
                     echo "$reactie <br />";
                 }
+                unset($uitkomst);
                 echo "<div> 
                   <form method='post' action='groep4sommen.php?somtype=$operator' name='somkeuze'>
                   <input id='begin' type='submit' value='volgende vraag'>
