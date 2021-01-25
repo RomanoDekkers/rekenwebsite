@@ -3,6 +3,20 @@
 <head>
     <title>desplinter</title>
     <link rel="stylesheet" href="index.css">
+	<style>
+		#container {
+			height: 403px;
+			width: 503px;
+			position: absolute;
+			top: 90px;
+			padding: 30px 0 5px 0;
+			margin: 0 750px 0;
+		}
+		
+		.foto {
+			float: left;
+		}
+	</style>
 </head>
 <body>
 <nav>
@@ -23,6 +37,12 @@
         <li><a href="contact.php" id="contact">contact opnemen</a></li>
     </ul>
 </nav>
+<div id="container">
+<div id="foto"><img class="foto" src="foto_1.jpg" alt="foto" height="200px" width="250px"></div>
+<div id="foto"><img class="foto" src="foto_2.jpg" alt="foto" height="200px" width="250px"></div>
+<div id="foto"><img class="foto" src="foto_3.jpg" alt="foto" height="200px" width="250px"></div>
+<div id="foto"><img class="foto" src="foto_4.jpg" alt="foto" height="200px" width="250px"></div>
+</div>
 <br />
 <br />
 <h1>De Splinter</h1>
@@ -36,6 +56,7 @@
 <br/>
 <br/>
 <h2>bericht van de dag:</h2>
+<p>hier komt het bericht van de dag</p>
 </body>
 </html>
 
