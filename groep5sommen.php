@@ -28,13 +28,13 @@ if(isset($_GET['somtype'])) {
     if (isset($_POST['getalEen'])) {
         $_nummer1 = $_POST['getalEen']; //uitkomst controlleren
     } else {
-        $_nummer1 = rand(0, 50); //nieuwe som
+        $_nummer1 = rand(0, 100); //nieuwe som
     }
 
     if (isset($_POST['getalTwee'])) {
         $_nummer2 = $_POST['getalTwee']; //uitkomt controlleren
     } else {
-        $_nummer2 = rand(0, 50); //nieuwe som
+        $_nummer2 = rand(0, 100); //nieuwe som
     }
 
     switch ($_GET['somtype']) {
@@ -62,15 +62,15 @@ if(isset($_GET['somtype'])) {
         echo "De oude som is " . $_nummer1 . " " . $operator . " " . $_nummer2;
 
         if ($_POST['antwoord'] == $uitkomst) {
-            $reactie = "<br /> Het antwoord is " . $uitkomst . "<br /> en je hebt het goede antwoord gegeven";
+            $reactie = "<br />Het antwoord is " . $uitkomst . "<br /> en je hebt het goede antwoord gegeven";
             echo "$reactie <br />";
         } else {
-            $reactie = "<br />Helaas, het antwoord is fout. <br />Het goede antwoordt was " . $uitkomst . "";
+            $reactie = "<br />Helaas, het antwoord is fout.<br /> Het goede antwoordt was " . $uitkomst . "";
             echo "$reactie <br />";
         }
         unset($uitkomst);
         echo "<div> 
-                  <form method='post' action='groep4sommen.php?somtype=$operator' name='somkeuze'>
+                  <form method='post' action='groep5sommen.php?somtype=$operator' name='somkeuze'>
                   <input id='begin' type='submit' value='volgende vraag'>
                   </form>   
                   </div>";
