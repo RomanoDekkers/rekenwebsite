@@ -70,7 +70,7 @@ if(isset($_GET['somtype'])) {
         }
         unset($uitkomst);
         echo "<div> 
-                  <form method='post' action='groep5sommen.php?somtype=$operator' name='somkeuze'>
+                  <form method='post' action='groep5sommen.php?somtype=$_GET[somtype]' name='somkeuze'>
                   <input id='begin' type='submit' value='volgende vraag'>
                   </form>   
                   </div>";

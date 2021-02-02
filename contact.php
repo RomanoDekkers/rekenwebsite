@@ -7,7 +7,7 @@
 		position: absolute;
 	top: 40px;
 	padding: 30px 0 5px 0;
-	margin: 0 250px 0;
+	margin: 0 200px 0;
 	}
 	</style>
 </head>

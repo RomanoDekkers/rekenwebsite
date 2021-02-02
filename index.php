@@ -9,8 +9,8 @@
 			width: 503px;
 			position: absolute;
 			top: 90px;
-			padding: 30px 0 5px 0;
-			margin: 0 750px 0;
+			padding: 60px 0 5px 0;
+			margin: 0 950px 0;
 		}
 		
 		.foto {
